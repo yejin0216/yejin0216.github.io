@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Analytics</title>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <!--header-->
+        <nav>
+            <ul class="header">
+                <li class="left"><span class="fas fa-signal"></span></li>
+                <li class="middle"><input type="text" class="questions" placeholder="대시보드나 위젯 이름을 검색할 수 있습니다."/></li>
+                <li class="right"><img src="./images/user.png"><span>김예진<span class="fas fa-caret-down"></span></span></li>
+            </ul>
+            <div id="myDropdown" class="dropdown">
+                <a href="#">계정</a>
+                <a href="#">로그아웃</a>
+            </div>
+        </nav>
+        <!--//header-->
+        <!--contents-->
+        <div class="contents">
+            <!--left menu-->
+            <div class="menu">
+                <ul class="items">
+                    <li class="item selected"><a href="javascript:void(0);"><span class="fas fa-tachometer-alt" title="Dashboard"></span></a></li>
+                    <li class="item"><a href="javascript:void(0);"><span class="fas fa-server" title="Datasource Manager"></span></a></li>
+                </ul>
+            </div>
+            <!--dashboard-->
+            <div class="dashbd">
+                <select class="name">
+                    <option>제주시 환경정보 기초통계</option>
+                </select>
+                <ul class="grid">
+                    <li>
+                        <div class="widget">
+                            <div class="widget-header">
+                                <div class="widget-name">
+                                    <span>14~17년 제주시 적설량 비교</span>
+                                </div>
+                                <div class="widget-control" title="위젯 수정">
+                                    <a href="detail.html" target="_self">
+                                        <span class="fas fa-ellipsis-v"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget-content" id="container"></div>
+                        </div>
+                    </li>
+                </ul>
+                <!--위젯버튼-->
+                <div class="widget-button">
+                    <div class="add-widget" title="위젯 추가"><span class="fa fa-plus"></span></div>
+                </div>
+                <!--//위젯버튼-->
+            </div>
+        </div>
+        <!--//contents-->
+    </div>
+</div>
+<footer>
+</footer>
+
+<script src="./dashbd.js" type="text/javascript"></script>
+<!--Remove-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="./chart.js" type="text/javascript"></script>
+<!--//Remove-->
+</body>
+</html>

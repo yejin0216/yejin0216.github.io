@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+:root{
+    --fontType:'Noto Sans KR', sans-serif;
+    --fontSize:14px;
+}
+
+html{font-family:var(--fontType);font-size:var(--fontSize);width:100%;height:100%;}

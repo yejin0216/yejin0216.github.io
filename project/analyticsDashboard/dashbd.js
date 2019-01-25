@@ -18,29 +18,6 @@ wdgtCntrl.forEach( cntrl => {
     cntrl.addEventListener('mouseleave', showEllipsisCntrl);
 });
 
-
-
-
-/* 타이틀 Toggle */
-const titles = document.querySelectorAll('.panel-subtitle');
-function toggleContent(e) {
-    let keycode = this.getAttribute('data-target');
-    let content = document.querySelector(`.panel-contents[data-target="${keycode}"]`);
-    this.querySelector('.fa-angle-down').classList.toggle('fa-angle-up');
-    content.classList.toggle('hide');
-}
-titles.forEach(title => title.addEventListener('click', toggleContent));
-
-
-/* 데이터 개체 Tree Toggle */
-const fields = document.querySelectorAll('.contents-item');
-function toggleField(e) {
-    this.childNodes[0].classList.toggle('fa-caret-right');
-    this.parentNode.childNodes[2].classList.toggle('hide');
-}
-fields.forEach(field => field.addEventListener('click', toggleField));
-
-
 /* 패널 horizontal resize */
 const grips = document.querySelectorAll('.panel-grip');
 let startY, startH, gripcode, resizer;
