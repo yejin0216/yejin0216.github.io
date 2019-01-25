@@ -12,17 +12,10 @@ function showEllipsisCntrl(e) {
     this.querySelector('.fa-pen').classList.add('fa-ellipsis-v');
     this.querySelector('.fa-ellipsis-v').classList.remove('fa-pen');
 }
-function moveToEditMode(e) {
-    let dashbd = document.getElementsByClassName('dashbd')[0];
-    let editMode = document.getElementsByClassName('edit-mode')[0];
-    dashbd.style.display = 'none';
-    editMode.style.display = 'block';
-}
 
 wdgtCntrl.forEach( cntrl => {
     cntrl.addEventListener('mouseover', showEditCntrl);
     cntrl.addEventListener('mouseleave', showEllipsisCntrl);
-    cntrl.addEventListener('click', moveToEditMode)
 });
 
 
