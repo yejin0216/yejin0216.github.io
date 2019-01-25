@@ -2,22 +2,30 @@
  *  @author yejin kim
  */
 
-/* 패널 Switch */
-const items = document.querySelectorAll('.item');
-const itemkeys = Array.from(items).map(item => item.dataset.target);
-function switchPanel(e) {
-    let selectedKey = this.dataset.target;
-    this.classList.toggle('selected');
-    document.querySelector(`.panel[data-target="${selectedKey}"]`).classList.toggle('hide');
-
-    itemkeys.filter(itemkey => {
-        if (itemkey != selectedKey) {
-            document.querySelector(`.item[data-target="${itemkey}"]`).classList.remove('selected');
-            document.querySelector(`.panel[data-target="${itemkey}"]`).classList.add('hide');
-        }
-    })
+// 위젯 수정 버튼 Toggle 제어
+const wdgtCntrl = document.querySelectorAll('.widget-control');
+function showEditCntrl(e) {
+    this.querySelector('.fa-ellipsis-v').classList.add('fa-pen');
+    this.querySelector('.fa-pen').classList.remove('fa-ellipsis-v');
 }
-items.forEach(item => item.addEventListener('click', switchPanel));
+function showEllipsisCntrl(e) {
+    this.querySelector('.fa-pen').classList.add('fa-ellipsis-v');
+    this.querySelector('.fa-ellipsis-v').classList.remove('fa-pen');
+}
+function moveToEditMode(e) {
+    let dashbd = document.getElementsByClassName('dashbd')[0];
+    let editMode = document.getElementsByClassName('edit-mode')[0];
+    dashbd.style.display = 'none';
+    editMode.style.display = 'block';
+}
+
+wdgtCntrl.forEach( cntrl => {
+    cntrl.addEventListener('mouseover', showEditCntrl);
+    cntrl.addEventListener('mouseleave', showEllipsisCntrl);
+    cntrl.addEventListener('click', moveToEditMode)
+});
+
+
 
 
 /* 타이틀 Toggle */
