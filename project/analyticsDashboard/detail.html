@@ -10,128 +10,34 @@
 <div class="container">
     <div class="main">
         <!--header-->
-        <nav>
-            <ul class="header">
+        <header>
+            <ul>
                 <li class="left"><span class="fas fa-signal"></span></li>
-                <li class="middle back"><a href="index.html" target="_self"><span><i class="fas fa-undo"></i> 이전 화면으로 돌아가기</span></a></li>
+                <li class="middle back"><a href="index.html"><span>< Back</span></a></li>
                 <li class="right"><img src="./images/user.png"><span>김예진<span class="fas fa-caret-down"></span></span></li>
             </ul>
-        </nav>
+        </header>
         <!--//header-->
         <!--contents-->
         <div class="contents">
             <!--left menu-->
-            <div class="menu">
-                <ul class="items">
-                    <li class="item selected"><a href="javascript:void(0);"><span class="fas fa-tachometer-alt" title="Dashboard"></span></a></li>
-                    <li class="item"><a href="javascript:void(0);"><span class="fas fa-server" title="Datasource Manager"></span></a></li>
+            <nav>
+                <ul>
+                    <li class="selected"><a href="javascript:void(0);"><span class="fas fa-tachometer-alt" title="Dashboard"></span></a></li>
+                    <li><a href="javascript:void(0);"><span class="fas fa-server" title="Datasource Manager"></span></a></li>
                 </ul>
-            </div>
+            </nav>
+            <!--//left menu-->
             <!--dashboard-->
-            <div class="dashbd editmode">
+            <article class="detail">
                 <div class="widget-content" id="container"></div> <!--chart-->
-                <div class="panel right"><!--chart editmode:시각화-->
-                    <div class="panel-title">
-                        <span>시각화</span>
-                    </div>
-                    <div class="panel-contents contents-table contents-list" data-target="200">
-                        <ul>
-                            <li><i class="fas fa-chart-pie"></i></li>
-                            <li><i class="fas fa-chart-bar"></i></li>
-                            <li><i class="fas fa-chart-area"></i></li>
-                            <li><i class="fas fa-table"></i></li>
-                        </ul>
-                    </div>
-                    <div class="panel-grip" data-target="200">
-                        <span class="fas fa-grip-lines"></span>
-                        <h2></h2>
-                    </div> <!--resize-->
-                    <div class="panel-contents" data-target="210">
-                        <div class="panel-subtitle">
-                            <span>형식</span>
-                        </div>
-                        <ul class="contents-list format" data-target="211">
-                            <li>
-                                <div class="filter">
-                                    <select class="date-format">
-                                        <option value="">-- 선택 --</option>
-                                        <option value="number">Number</option>
-                                        <option value="currency">Currency</option>
-                                        <option value="unit">Unit</option>
-                                    </select>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="panel-grip" data-target="211">
-                        <span class="fas fa-grip-lines"></span>
-                        <h2></h2>
-                    </div> <!--resize-->
-                    <div class="panel-contents" data-target="220">
-                        <div class="panel-subtitle">
-                            <span>필터</span>
-                        </div>
-                        <ul class="contents-list measure" data-target="220">
-                            <li class="selected"><span class="fas fa-calendar-alt"></span><span class="data-field">날짜</span></li>
-                            <div class="filter date-filter">
-                                <label>날짜 유형 :</label>
-                                <select class="date-type">
-                                    <option value="">-- 선택 --</option>
-                                    <option value="year">Year</option>
-                                    <option value="month">Month</option>
-                                    <option value="day">Day</option>
-                                    <option value="hour">Hour</option>
-                                </select>
-                                <select class="date-range">
-                                    <option value="">-- 선택 --</option>
-                                    <option value="between">Between</option>
-                                    <option value="after">After</option>
-                                    <option value="before">Before</option>
-                                </select>
-                                <div data-date-detail="between">
-                                    <label>시작일자 :</label>
-                                    <input type="text" class="startDate" placeholder="YYYY-MM-DD HH:MI:SS" />
-                                    <label>종료일자 :</label>
-                                    <input type="text" class="endDate" placeholder="YYYY-MM-DD HH:MI:SS" />
-                                </div>
-                                <!--<div data-date-detail="afterbefore">-->
-                                <!--<label>Date :</label>-->
-                                <!--<input type="text">-->
-                                <!--</div>-->
-                            </div>
-                            <li><span class="fas fa-list-ol"></span><span class="data-field">숫자</span></li>
-                            <div class="filter date-filter">
-                                <label>범주 :</label>
-                                <select class="date-type">
-                                    <option value="">-- 선택 --</option>
-                                    <option value="equal">Equals</option>
-                                    <option value="ne">Does not equal</option>
-                                    <option value="gt">Greater than</option>
-                                    <option value="lt">Less than</option>
-                                    <option value="gte">Greater than or equal to</option>
-                                    <option value="lte">Less than or equal to</option>
-                                    <option value="between">Between</option>
-                                </select>
-                                <div data-date-detail="between">
-                                    <label>최솟값 :</label>
-                                    <input type="number" class="startDate" placeholder="숫자 입력" />
-                                    <label>최댓값 :</label>
-                                    <input type="number" placeholder="숫자 입력" />
-                                </div>
-                                <!--<div data-date-detail="equal">-->
-                                <!--<input type="number" placeholder="숫자 입력" />-->
-                                <!--</div>-->
-                            </div>
-                        </ul>
-                    </div>
-                </div>
                 <div class="panel left"><!--chart editmode:데이터개체-->
                     <div class="panel-title">
                         <span>필드 목록</span>
                     </div>
                     <div class="panel-contents" data-target="100">
                         <div class="contents-search"><input type="text" placeholder="검색"/></div>
-                        <ul class="contents-list top-list" data-target="101">
+                        <ul class="contents-list datafield" data-target="101">
                             <li><span class="contents-item"><span class="fas fa-caret-down"></span><span class="data-field">제주도청</span></span>
                                 <ul class="nested">
                                     <li class="selected" data-key="제주도청/온도 MIN">온도 MIN</li>
@@ -169,7 +75,7 @@
                     <div class="panel-contents" data-target="110">
                         <ul class="contents-list measure" data-target="110">
                             <li class="selected"><span class="fas fa-calendar-alt"></span><span class="data-field">날짜</span></li>
-                            <div class="filter date-filter">
+                            <div class="filter-type">
                                 <label>날짜 유형 :</label>
                                 <select class="date-type">
                                     <option value="">-- 선택 --</option>
@@ -199,7 +105,110 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                <div class="panel right"><!--chart editmode:시각화-->
+                    <div class="panel-title">
+                        <span>시각화</span>
+                    </div>
+                    <div class="panel-contents" data-target="200">
+                        <ul class="contents-table">
+                            <li><i class="fas fa-chart-pie"></i></li>
+                            <li><i class="fas fa-chart-bar"></i></li>
+                            <li><i class="fas fa-chart-area"></i></li>
+                            <li><i class="fas fa-table"></i></li>
+                            <li><i class="fas fa-chart-pie"></i></li>
+                            <li><i class="fas fa-chart-bar"></i></li>
+                            <li><i class="fas fa-chart-area"></i></li>
+                            <li><i class="fas fa-table"></i></li>
+                            <li><i class="fas fa-chart-pie"></i></li>
+                            <li><i class="fas fa-chart-bar"></i></li>
+                            <li><i class="fas fa-chart-area"></i></li>
+                            <li><i class="fas fa-table"></i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-grip" data-target="200"><!--resize-->
+                        <span class="fas fa-grip-lines"></span>
+                        <h2></h2>
+                    </div>
+                    <div class="panel-contents" data-target="210">
+                        <div class="panel-subtitle">
+                            <span>형식</span>
+                        </div>
+                        <ul class="contents-list format" data-target="211">
+                            <li>
+                                <div>
+                                    <select class="date-format">
+                                        <option value="">-- 선택 --</option>
+                                        <option value="number">Number</option>
+                                        <option value="currency">Currency</option>
+                                        <option value="unit">Unit</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-grip" data-target="211"><!--resize-->
+                        <span class="fas fa-grip-lines"></span>
+                        <h2></h2>
+                    </div>
+                    <div class="panel-contents" data-target="220">
+                        <div class="panel-subtitle">
+                            <span>필터</span>
+                        </div>
+                        <ul class="contents-list filter" data-target="220">
+                            <li class="selected"><span class="fas fa-calendar-alt"></span><span class="data-field">날짜</span></li>
+                            <div class="filter-type">
+                                <label>날짜 유형 :</label>
+                                <select class="date-type">
+                                    <option value="">-- 선택 --</option>
+                                    <option value="year">Year</option>
+                                    <option value="month">Month</option>
+                                    <option value="day">Day</option>
+                                    <option value="hour">Hour</option>
+                                </select>
+                                <select class="date-range">
+                                    <option value="">-- 선택 --</option>
+                                    <option value="between">Between</option>
+                                    <option value="after">After</option>
+                                    <option value="before">Before</option>
+                                </select>
+                                <div data-date-detail="between">
+                                    <label>시작일자 :</label>
+                                    <input type="text" class="startDate" placeholder="YYYY-MM-DD HH:MI:SS" />
+                                    <label>종료일자 :</label>
+                                    <input type="text" class="endDate" placeholder="YYYY-MM-DD HH:MI:SS" />
+                                </div>
+                                <!--<div data-date-detail="afterbefore">-->
+                                <!--<label>Date :</label>-->
+                                <!--<input type="text">-->
+                                <!--</div>-->
+                            </div>
+                            <li><span class="fas fa-list-ol"></span><span class="demension">숫자</span></li>
+                            <div class="filter-type">
+                                <label>범주 :</label>
+                                <select class="date-type">
+                                    <option value="">-- 선택 --</option>
+                                    <option value="equal">Equals</option>
+                                    <option value="ne">Does not equal</option>
+                                    <option value="gt">Greater than</option>
+                                    <option value="lt">Less than</option>
+                                    <option value="gte">Greater than or equal to</option>
+                                    <option value="lte">Less than or equal to</option>
+                                    <option value="between">Between</option>
+                                </select>
+                                <div data-date-detail="between">
+                                    <label>최솟값 :</label>
+                                    <input type="number" class="startDate" placeholder="숫자 입력" />
+                                    <label>최댓값 :</label>
+                                    <input type="number" placeholder="숫자 입력" />
+                                </div>
+                                <!--<div data-date-detail="equal">-->
+                                <!--<input type="number" placeholder="숫자 입력" />-->
+                                <!--</div>-->
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </div>
         <!--//contents-->
     </div>
