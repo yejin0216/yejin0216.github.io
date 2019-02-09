@@ -30,7 +30,7 @@ header ul li.middle{flex-grow:1;padding:10px 20px;}
 header ul li.middle.back{text-align:left;}
 header ul li.middle.back span{line-height:30px;cursor:pointer;}
 header ul li.middle.back span:hover{color:#2f7dca;}
-header ul li.middle input{border-bottom:1px solid #ffffff;width:400px;}
+header ul li.middle input{border-bottom:1px solid #ffffff;width:400px;color:#ffffff;}
 header ul li.middle input::placeholder{color:#ffffff90;}
 header ul li.right{flex-shrink:0;padding:10px 20px;display:flex;align-items:center;border-left:1px solid #ffffff30;}
 header ul li.right span{margin-left:10px;cursor:pointer;}
@@ -69,7 +69,7 @@ nav ul li.selected{border-left:4px solid #2f7dca;}
 .contents article.detail .panel .panel-subtitle{font-weight:bold;font-size:13px;cursor:pointer;padding:10px 25px;}
 .contents article.detail .panel .panel-contents{/*margin-bottom:20px;*/}
 .contents article.detail .panel .panel-contents input,
-.contents article.detail .panel .panel-contents select{border-bottom:1px solid #434343;}
+.contents article.detail .panel .panel-contents select{/*border-bottom:1px solid #434343;*/}
 .contents article.detail .panel .panel-contents ul{margin:0px;font-size:13px;padding:0 30px;}
 .contents article.detail .panel .panel-contents ul li{padding:3px;cursor:pointer;}
 .contents article.detail .panel .panel-contents ul li .fas{color:#555;}
