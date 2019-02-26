@@ -63,13 +63,15 @@ nav ul li.selected{border-left:4px solid #2f7dca;}
 
 /* View Widget Details */
 .contents article.detail{display:grid;grid-template-columns:1fr 250px 250px;margin:0px !important;}
-.contents article.detail .widget-content{height:460px;margin:9px;}
+.contents article.detail .widget-name{height:40px;margin:9px 9px 0 9px;background-color:#ffffff;}
+.contents article.detail .widget-name input[type="text"]{font-size:15px;color:#676a6c;padding:10px 20px;}
+.contents article.detail .widget-content{height:460px;margin:0 9px 9px 9px;}
 .contents article.detail .panel{height:inherit;width:250px;background-color:#ffffff;border-left:1px solid #eeeeee;}
 .contents article.detail .panel .panel-title{font-weight:bold;font-size:15px;padding:20px 20px 15px 20px;}
 .contents article.detail .panel .panel-subtitle{font-weight:bold;font-size:13px;cursor:pointer;padding:10px 25px;}
 .contents article.detail .panel .panel-contents{/*margin-bottom:20px;*/}
 .contents article.detail .panel .panel-contents input,
-.contents article.detail .panel .panel-contents select{/*border-bottom:1px solid #434343;*/}
+.contents article.detail .panel .panel-contents select{border-bottom:1px solid #434343;-webkit-appearance:none;-webkit-border-radius:0px;}
 .contents article.detail .panel .panel-contents ul{margin:0px;font-size:13px;padding:0 30px;}
 .contents article.detail .panel .panel-contents ul li{padding:3px;cursor:pointer;}
 .contents article.detail .panel .panel-contents ul li .fas{color:#555;}
@@ -84,7 +86,8 @@ nav ul li.selected{border-left:4px solid #2f7dca;}
 .contents article.detail .panel .panel-contents .contents-list select, input{border-color:#555555;width:90%;}
 .contents article.detail .panel .panel-contents .contents-list label{font-size:10px;color:#444;}
 .contents article.detail .panel .panel-contents .contents-list .filter-type{margin:3px;padding:5px 10px;border:1px dashed #dddddd;border-radius:3px;}
-.contents article.detail .panel .panel-contents .contents-list .filter-type .startDate{margin-bottom:10px;}
+.contents article.detail .panel .panel-contents .contents-list .filter-type .startDate,
+.contents article.detail .panel .panel-contents .contents-list .filter-type .date-range{margin-bottom:10px;}
 .contents article.detail .panel .panel-contents .contents-table{padding:0 30px;max-height:120px;overflow:auto;display:flex;flex-flow:row wrap;}
 .contents article.detail .panel .panel-contents .contents-table li{width:40px;height:30px;}
 .contents article.detail .panel .panel-contents .contents-table li img{width:30px;}
